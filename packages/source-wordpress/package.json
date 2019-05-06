@@ -13,12 +13,18 @@
   ],
   "dependencies": {
     "axios": "^0.18.0",
-    "better-queue": "^3.8.7"
+    "better-queue": "^3.8.7",
+    "snyk": "^1.161.1"
   },
   "publishConfig": {
     "access": "public"
   },
   "engines": {
     "node": ">=8.3"
-  }
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
