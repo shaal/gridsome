@@ -22,12 +22,18 @@
     "get-stream": "^4.0.0",
     "micromatch": "^3.1.10",
     "parse5": "^5.1.0",
-    "replacestream": "^4.0.3"
+    "replacestream": "^4.0.3",
+    "snyk": "^1.163.3"
   },
   "publishConfig": {
     "access": "public"
   },
   "engines": {
     "node": ">=8.3"
-  }
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
